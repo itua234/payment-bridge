@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	app "github.com/itua234/payment-gateway/internal/app"
+	app "github.com/itua234/payment-bridge/internal/app"
 )
 
 func main() {

@@ -3,11 +3,10 @@ package services
 import (
 	"context"
 	"errors"
-	"time"
 
-	"github.com/itua234/payment-gateway/internal/dto/request"
-	"github.com/itua234/payment-gateway/internal/models"
-	"github.com/itua234/payment-gateway/internal/repositories"
+	request "github.com/itua234/payment-bridge/internal/dto/request"
+	models "github.com/itua234/payment-bridge/internal/models"
+	"github.com/itua234/payment-bridge/internal/repositories"
 	"gorm.io/gorm"
 )
 
@@ -40,18 +39,17 @@ func (s *PaymentService) CreatePayment(
 		return nil, err
 	}
 
-	payment := models.Payment{
+	payment := &models.Payment{
 		IdempotencyKey: req.IdempotencyKey,
 		Amount:         req.Amount,
 		Currency:       req.Currency,
 		State:          models.Pending,
-		CreatedAt:      time.Now(),
-		UpdatedAt:      time.Now(),
+		//MetaData:       metadataInstance,
 	}
 
 	if err := s.paymentRepo.Create(payment); err != nil {
 		return nil, err
 	}
 
-	return &payment, nil
+	return payment, nil
 }

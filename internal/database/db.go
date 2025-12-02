@@ -3,7 +3,7 @@ package database
 import (
 	"fmt"
 
-	"github.com/itua234/payment-gateway/internal/models"
+	"github.com/itua234/payment-bridge/internal/models"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )

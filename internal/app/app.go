@@ -6,8 +6,8 @@ import (
 	"log"
 
 	"github.com/gin-gonic/gin"
-	"github.com/itua234/payment-gateway/internal/config"
-	"github.com/itua234/payment-gateway/internal/database"
+	config "github.com/itua234/payment-bridge/internal/config"
+	"github.com/itua234/payment-bridge/internal/database"
 )
 
 // Application holds the dependencies for the HTTP server

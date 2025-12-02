@@ -3,7 +3,7 @@ package config
 import (
 	"os"
 
-	"github.com/itua234/payment-gateway/internal/database"
+	"github.com/itua234/payment-bridge/internal/database"
 	"github.com/joho/godotenv"
 )
 
