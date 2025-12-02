@@ -1,0 +1,8 @@
+.env
+.env.example
+.config.json
+src/twitter-archive.zip
+config.json
+internal/data/
+internal/twitter-archive.zip
+dump.js
