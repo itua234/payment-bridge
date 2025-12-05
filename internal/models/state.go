@@ -11,6 +11,7 @@ const (
 	Captured   PaymentState = "captured"
 	Voided     PaymentState = "voided"
 	Refunded   PaymentState = "refunded"
+	Failed     PaymentState = "failed"
 )
 
 var validTransitions = map[PaymentState][]PaymentState{
@@ -19,6 +20,7 @@ var validTransitions = map[PaymentState][]PaymentState{
 	Captured:   {Refunded},
 	Voided:     {},
 	Refunded:   {},
+	Failed:     {},
 }
 
 func (p PaymentState) CanTransitionTo(newState PaymentState) bool {
